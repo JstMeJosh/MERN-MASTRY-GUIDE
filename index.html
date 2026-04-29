@@ -37,7 +37,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sticky top-0 z-50 shadow-lg">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sticky top-0 z-60 shadow-lg">
         <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
             <!-- MERN Stack Logo -->
             <div class="mb-4">
@@ -60,7 +60,7 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed top-0 z-40">
+    <nav class="bg-white shadow-md sticky top-0 z-55">
         <div class="max-w-4xl mx-auto px-4">
             <!-- Mobile Hamburger Button -->
             <div class="flex items-center justify-between py-3 md:hidden">
@@ -613,7 +613,6 @@ export const AuthProvider = ({ children }) => {
     <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <p class="text-sm">MERN Mastery Program — Complete Notes</p>
-            <p class="text-xs mt-2">&copy; <span id="year"></span> Joshua Nnorom. All rights reserved.</p>
             <a href="https://github.com/JstMeJosh/" class="text-xs mt-2 text-md text-center font-bold underline">JOSHUA NNOROM</a>
         </div>
     </footer>
@@ -622,9 +621,6 @@ export const AuthProvider = ({ children }) => {
         hljs.highlightAll();
     </script>
     <script>
-        // Set dynamic year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
         // Hamburger menu toggle
         const hamburgerBtn = document.getElementById('hamburger-btn');
         const navMenu = document.getElementById('nav-menu');
