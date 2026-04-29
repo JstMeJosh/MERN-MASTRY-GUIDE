@@ -613,12 +613,34 @@ export const AuthProvider = ({ children }) => {
     <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <p class="text-sm">MERN Mastery Program — Complete Notes</p>
+            <p class="text-xs mt-2">&copy; <span id="year"></span> Joshua Nnorom. All rights reserved.</p>
             <a href="https://github.com/JstMeJosh/" class="text-xs mt-2 text-md text-center font-bold underline">JOSHUA NNOROM</a>
         </div>
     </footer>
 
     <script>
         hljs.highlightAll();
+    </script>
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navMenu.classList.add('hidden');
+                }
+            });
+        });
     </script>
 </body>
 </html>
